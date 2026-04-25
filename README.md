@@ -29,7 +29,7 @@ Open: http://localhost:5503
 - `GET /ping` — health check
 - `GET /weather/:cityName` — proxied WeatherAPI forecast (server adds API key)
 
-## Errors, bugs and symptoms (what we saw)
+## Errors, bugs and symptoms
 
 - Client crash: "Cannot set properties of null" in `script.js` when updating DOM.
 - Wrong DOM selector: script used a selector that didn't match HTML (`.hourly-forecast` vs `.hourly-weather`).
@@ -65,7 +65,7 @@ Open: http://localhost:5503
 - `README.md`
   - (this file) Added debugging notes and run instructions.
 
-## Why these bugs happened (simple explanations)
+## Why these bugs happened
 
 - DOM errors: script updated elements that didn't exist yet or used the wrong selector -> resulted in `null` dereference.
 - Asset/file typo: small filename mismatch produced a 404 and missing icon.
@@ -86,7 +86,7 @@ taskkill /PID <PID> /F
 
 - Hard-reload browser to pick up changes: Ctrl+Shift+R (or disable cache in DevTools → Network)
 
-## Lessons & best practices (remember these)
+## Lessons 
 
 - Always check DOM elements exist before mutating them.
 - Keep HTML selectors and JS in sync; prefer `data-` attributes for stable hooks.
